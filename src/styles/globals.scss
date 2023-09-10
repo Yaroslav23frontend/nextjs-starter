@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./typography/typography.scss";
+body {
+  box-sizing: border-box;
+}
+@layer {
+  .svg {
+    width: 100% !important;
+    height: 100% !important;
+    @apply stroke-neutral-700 fill-neutral-700 text-neutral-700 dark:fill-neutral-500 dark:stroke-neutral-500 dark:text-neutral-500;
+  }
+}
+
+.image {
+  position: relative !important;
+}
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  color: #999;
+
+  position: relative;
+
+  z-index: 0;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
